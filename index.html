@@ -1,0 +1,2344 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mohit Rey — SEO Head & Senior SEO Specialist</title>
+<meta name="description" content="Mohit Rey – Senior SEO Specialist & SEO Head with 5+ years of experience in Technical SEO, Local SEO, E-commerce SEO, and AI-assisted SEO workflows. Based in India."/>
+<meta property="og:title" content="Mohit Rey — SEO Head & Senior SEO Specialist"/>
+<meta property="og:description" content="5+ years ranking websites. Technical SEO · Local SEO · E-commerce SEO · AI-Assisted Content. Currently SEO Head at Per4mance Guru."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+<style>
+/* ═══════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════ */
+:root {
+  --g1: #4D7A68;   /* darkest teal-green */
+  --g2: #5F8C7A;   /* primary green */
+  --g3: #8DB5A0;   /* mid sage */
+  --g4: #B8D4C4;   /* light mint */
+  --g5: #D8EDE3;   /* pale mint */
+  --g6: #EDF7F1;   /* near-white green */
+  --g7: #F5FBF7;   /* background */
+  --ink: #1A2B24;
+  --ink2: #2E4A3C;
+  --muted: #5A7A6C;
+  --border: #C8E0D2;
+  --white: #FFFFFF;
+  --shadow: 0 4px 24px rgba(77,122,104,0.10);
+  --shadow-lg: 0 12px 48px rgba(77,122,104,0.16);
+  --radius: 14px;
+  --radius-sm: 8px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--g7);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* ═══════════════════════════════════════
+   TYPOGRAPHY
+═══════════════════════════════════════ */
+.display {
+  font-family: 'DM Serif Display', Georgia, serif;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.display-xl { font-size: clamp(2.6rem, 6vw, 5.5rem); }
+.display-lg { font-size: clamp(2rem, 4vw, 3.2rem); }
+.display-md { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+.mono { font-family: 'JetBrains Mono', monospace; }
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--g2);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background: var(--g2);
+  border-radius: 2px;
+}
+
+/* ═══════════════════════════════════════
+   LAYOUT
+═══════════════════════════════════════ */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+.section { padding: 6rem 0; }
+.section-alt { background: var(--g6); }
+.section-dark { background: var(--g2); }
+
+/* ═══════════════════════════════════════
+   NAV
+═══════════════════════════════════════ */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(245,251,247,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.3s;
+}
+nav.scrolled { box-shadow: var(--shadow); }
+.nav-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 1.5rem;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.25rem;
+  color: var(--ink);
+}
+.nav-logo span { color: var(--g2); }
+.nav-links {
+  display: flex; align-items: center; gap: 2rem;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--g2); }
+.btn-nav {
+  background: var(--g2);
+  color: var(--white) !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  transition: background 0.2s, transform 0.2s !important;
+}
+.btn-nav:hover { background: var(--g1) !important; transform: translateY(-1px); }
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+.hamburger span { width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: 0.3s; }
+.mobile-menu {
+  display: none; flex-direction: column; gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--g7);
+  border-top: 1px solid var(--border);
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-size: 0.9rem; color: var(--muted); font-weight: 500; }
+
+/* ═══════════════════════════════════════
+   BUTTONS
+═══════════════════════════════════════ */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600; font-size: 0.88rem;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--g2);
+  color: var(--white);
+  box-shadow: 0 4px 14px rgba(95,140,122,0.35);
+}
+.btn-primary:hover { background: var(--g1); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(95,140,122,0.4); }
+.btn-outline {
+  background: transparent;
+  color: var(--g2);
+  border: 1.5px solid var(--g2);
+}
+.btn-outline:hover { background: var(--g6); transform: translateY(-2px); }
+.btn-white {
+  background: var(--white);
+  color: var(--g2);
+}
+.btn-white:hover { background: var(--g6); transform: translateY(-2px); }
+
+/* ═══════════════════════════════════════
+   TAGS
+═══════════════════════════════════════ */
+.tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  background: var(--white);
+}
+.tag-green {
+  border-color: var(--g3);
+  color: var(--g1);
+  background: var(--g6);
+}
+.tag-dark {
+  background: var(--g2);
+  color: var(--white);
+  border-color: var(--g2);
+}
+
+/* ═══════════════════════════════════════
+   CARDS
+═══════════════════════════════════════ */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--g3);
+}
+.card-green {
+  background: var(--g2);
+  color: var(--white);
+  border-color: var(--g2);
+}
+.card-mint {
+  background: var(--g6);
+  border-color: var(--g4);
+}
+
+/* ═══════════════════════════════════════
+   GRID UTILS
+═══════════════════════════════════════ */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+@media (max-width: 900px) {
+  #tools-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 900px) {
+  .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════
+   HERO
+═══════════════════════════════════════ */
+#hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 8rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(135deg, var(--g7) 0%, var(--g6) 50%, var(--g5) 100%);
+}
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: float 8s ease-in-out infinite;
+}
+.hero-blob-1 {
+  width: 500px; height: 500px;
+  background: var(--g4);
+  top: -100px; right: -100px;
+  animation-delay: 0s;
+}
+.hero-blob-2 {
+  width: 350px; height: 350px;
+  background: var(--g3);
+  bottom: -50px; left: -80px;
+  animation-delay: 3s;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.05); }
+}
+.hero-inner {
+  position: relative; z-index: 1;
+  max-width: 1100px; margin: 0 auto; padding: 0 1.5rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+}
+@media (max-width: 768px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.35rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--g2);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+.hero-badge-dot {
+  width: 8px; height: 8px;
+  background: var(--g2);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.3); }
+}
+.hero-title { color: var(--ink); margin-bottom: 1.25rem; }
+.hero-title .accent { color: var(--g2); font-style: italic; }
+.hero-sub { color: var(--muted); font-size: 1.05rem; max-width: 500px; margin-bottom: 2rem; line-height: 1.7; }
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.hero-stats { display: flex; gap: 2rem; flex-wrap: wrap; }
+.stat-item { }
+.stat-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem;
+  color: var(--ink);
+  line-height: 1;
+}
+.stat-num .accent { color: var(--g2); }
+.stat-label { font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem; }
+
+/* hero right side */
+.hero-card-stack { position: relative; }
+.hero-card-main {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  animation: cardFloat 6s ease-in-out infinite;
+}
+@keyframes cardFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.hero-card-float {
+  position: absolute;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  box-shadow: var(--shadow);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink);
+  display: flex; align-items: center; gap: 0.5rem;
+  animation: cardFloat 5s ease-in-out infinite;
+}
+.float-1 { bottom: -20px; left: -30px; animation-delay: 1s; }
+.float-2 { top: -15px; right: -20px; animation-delay: 2.5s; }
+.icon-circle {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--g6);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+}
+
+/* ═══════════════════════════════════════
+   MARQUEE
+═══════════════════════════════════════ */
+.marquee-section {
+  background: var(--g2);
+  padding: 1rem 0;
+  overflow: hidden;
+}
+.marquee-track {
+  display: flex; gap: 3rem;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-item {
+  display: flex; align-items: center; gap: 0.6rem;
+  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  white-space: nowrap;
+}
+.marquee-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.5); }
+
+/* ═══════════════════════════════════════
+   SERVICES
+═══════════════════════════════════════ */
+.service-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--g3), var(--g2));
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+.service-card:hover::after { transform: scaleX(1); }
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--g4);
+}
+.service-icon {
+  width: 48px; height: 48px;
+  background: var(--g6);
+  border: 1px solid var(--g4);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  transition: background 0.3s;
+}
+.service-card:hover .service-icon { background: var(--g2); }
+
+/* ═══════════════════════════════════════
+   CASE STUDIES
+═══════════════════════════════════════ */
+.case-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.35s;
+}
+.case-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--g3);
+}
+.case-header {
+  background: linear-gradient(135deg, var(--g2) 0%, var(--g1) 100%);
+  padding: 1.5rem 1.75rem;
+  color: var(--white);
+}
+.case-body { padding: 1.75rem; }
+.case-meta {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+.case-meta-item { }
+.case-meta-label { font-size: 0.65rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.25rem; }
+.case-meta-val { font-size: 0.82rem; font-weight: 500; color: var(--ink); }
+
+/* ═══════════════════════════════════════
+   PROCESS
+═══════════════════════════════════════ */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+.process-grid::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--g4), var(--g2), var(--g4));
+  z-index: 0;
+}
+@media (max-width: 768px) {
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  .process-grid::before { display: none; }
+}
+@media (max-width: 480px) {
+  .process-grid { grid-template-columns: 1fr; }
+}
+.process-item {
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+.process-item:hover { transform: translateY(-8px); }
+.process-num {
+  width: 64px; height: 64px;
+  background: var(--white);
+  border: 2px solid var(--g3);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1rem;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.3rem;
+  color: var(--g2);
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+}
+.process-item:hover .process-num {
+  background: var(--g2);
+  color: var(--white);
+  border-color: var(--g2);
+  box-shadow: 0 8px 24px rgba(95,140,122,0.4);
+}
+
+/* ═══════════════════════════════════════
+   TOOLS
+═══════════════════════════════════════ */
+.tool-chip {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  transition: all 0.25s;
+}
+.tool-chip:hover {
+  background: var(--g6);
+  border-color: var(--g3);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  color: var(--g1);
+}
+
+/* ═══════════════════════════════════════
+   SKILL BARS
+═══════════════════════════════════════ */
+.skill-bar { margin-bottom: 1.25rem; }
+.skill-bar-header { display: flex; justify-content: space-between; margin-bottom: 0.4rem; }
+.skill-bar-track {
+  height: 6px;
+  background: var(--g5);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--g3), var(--g2));
+  border-radius: 10px;
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ═══════════════════════════════════════
+   TESTIMONIALS
+═══════════════════════════════════════ */
+.testimonial-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+}
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--g3);
+}
+.testimonial-quote { font-size: 2.5rem; line-height: 1; color: var(--g3); font-family: Georgia, serif; margin-bottom: 0.75rem; }
+.stars { color: #F59E0B; letter-spacing: 2px; font-size: 0.85rem; margin-bottom: 0.75rem; }
+
+/* ═══════════════════════════════════════
+   CTA SECTION
+═══════════════════════════════════════ */
+.cta-section {
+  background: linear-gradient(135deg, var(--g1) 0%, var(--g2) 50%, var(--g3) 100%);
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.cta-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; padding: 0 1.5rem; }
+.cta-contact-grid {
+  display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+.cta-contact-item { text-align: center; color: rgba(255,255,255,0.9); }
+.cta-contact-label { font-size: 0.65rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; margin-bottom: 0.3rem; }
+.cta-contact-val { font-size: 0.88rem; font-weight: 500; }
+
+/* ═══════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════ */
+footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.7);
+  padding: 2rem 0;
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 1.5rem;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+}
+
+/* ═══════════════════════════════════════
+   SECTION DIVIDER
+═══════════════════════════════════════ */
+.divider {
+  width: 60px; height: 3px;
+  background: linear-gradient(90deg, var(--g3), var(--g2));
+  border-radius: 3px;
+  margin: 1rem 0 1.5rem;
+}
+
+/* ═══════════════════════════════════════
+   ANIMATE ON SCROLL
+═══════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+
+/* ═══════════════════════════════════════
+   COUNTER
+═══════════════════════════════════════ */
+.counter-num { display: inline-block; }
+
+/* ═══════════════════════════════════════
+   KEYWORD PILL CLOUD
+═══════════════════════════════════════ */
+.keyword-cloud { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.keyword-pill {
+  background: var(--g6);
+  border: 1px solid var(--g4);
+  color: var(--g1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  transition: all 0.25s;
+  cursor: default;
+}
+.keyword-pill:hover {
+  background: var(--g2);
+  color: var(--white);
+  border-color: var(--g2);
+  transform: scale(1.05);
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .section { padding: 4rem 0; }
+}
+@media (max-width: 600px) {
+  .display-xl { font-size: 2.4rem; }
+  .display-lg { font-size: 1.8rem; }
+  .hero-stats { gap: 1.25rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="preloader-logo">M<span>.</span></div>
+  <div class="preloader-bar-track"><div class="preloader-bar-fill"></div></div>
+</div>
+
+<!-- CURSOR -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- SCROLL PROGRESS -->
+<div id="scroll-progress"></div>
+
+<!-- BACK TO TOP -->
+<a href="#" id="back-top" aria-label="Back to top">↑</a>
+
+<!-- ═══════════════════ NAV ═══════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Mohit<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#gsc-section" style="color:var(--g2);font-weight:600;">GSC Proof ✓</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li style="display:flex;align-items:center;gap:0.4rem;">
+        <span id="dark-label" style="font-size:0.85rem;">☀️</span>
+        <button id="dark-toggle" aria-label="Toggle dark mode"></button>
+      </li>
+      <li><a href="#contact" class="btn-nav">Let's Talk</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#contact" style="color:var(--g2);font-weight:600;">Let's Talk →</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-inner">
+
+    <div class="hero-left">
+      <div class="hero-badge reveal">
+        <span class="hero-badge-dot"></span>
+        Organic Growth Expert • 6+ Years of Experience 🚀
+      </div>
+
+      <h1 class="display display-xl hero-title reveal delay-1">
+        SEO That Ranks.<br>
+        Content That <span class="typewriter-word" id="tw-word">Converts.</span><span class="typewriter-cursor"></span><br>
+        Growth That Lasts.
+      </h1>
+
+      <p class="hero-sub reveal delay-2">
+        4 years of data-driven SEO — now super-charged with AI. I help businesses dominate search, create engines, and generate 10X results through SEO, AEO, GMB optimization &amp; Social Media.
+      </p>
+
+      <div class="hero-btns reveal delay-3">
+        <a href="#work" class="btn btn-primary">View Results</a>
+        <a href="#contact" class="btn btn-outline">Hire Me</a>
+      </div>
+
+      <div class="hero-stats reveal delay-4">
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter-num" data-target="6">0</span><span class="accent">+</span></div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter-num" data-target="50">0</span><span class="accent">+</span></div>
+          <div class="stat-label">Clients Served</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter-num" data-target="200">0</span><span class="accent">+</span></div>
+          <div class="stat-label">Keywords Ranked</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter-num" data-target="25">0</span><span class="accent"> Niches</span></div>
+          <div class="stat-label">Industries Covered</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100<span class="accent">%</span></div>
+          <div class="stat-label">Satisfaction Rate</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: floating card -->
+    <div class="hero-card-stack reveal-right delay-2" style="position:relative; padding: 2rem 1rem;">
+      <div class="hero-card-main">
+        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;">
+          <div style="width:44px;height:44px;background:var(--g6);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;">📈</div>
+          <div>
+            <div style="font-weight:600;color:var(--ink);font-size:0.9rem;">Organic Growth</div>
+            <div style="font-size:0.75rem;color:var(--muted);">Search Console · 90 days</div>
+          </div>
+        </div>
+        <div style="background:var(--g7);border-radius:10px;padding:1.25rem;margin-bottom:1rem;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:0.5rem;">
+            <span style="font-size:0.75rem;color:var(--muted);">Total Clicks</span>
+            <span style="font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--g2);">↑ 284%</span>
+          </div>
+          <!-- Mini bar chart -->
+          <div style="display:flex;align-items:flex-end;gap:4px;height:48px;">
+            <div style="flex:1;background:var(--g4);border-radius:3px 3px 0 0;height:20%"></div>
+            <div style="flex:1;background:var(--g4);border-radius:3px 3px 0 0;height:30%"></div>
+            <div style="flex:1;background:var(--g3);border-radius:3px 3px 0 0;height:45%"></div>
+            <div style="flex:1;background:var(--g3);border-radius:3px 3px 0 0;height:55%"></div>
+            <div style="flex:1;background:var(--g2);border-radius:3px 3px 0 0;height:70%"></div>
+            <div style="flex:1;background:var(--g2);border-radius:3px 3px 0 0;height:80%"></div>
+            <div style="flex:1;background:var(--g1);border-radius:3px 3px 0 0;height:95%"></div>
+            <div style="flex:1;background:var(--g1);border-radius:3px 3px 0 0;height:100%"></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+          <div style="background:var(--g6);border-radius:8px;padding:0.75rem;text-align:center;">
+            <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--g2);">Page 1</div>
+            <div style="font-size:0.7rem;color:var(--muted);">Rankings</div>
+          </div>
+          <div style="background:var(--g6);border-radius:8px;padding:0.75rem;text-align:center;">
+            <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--g2);">3× Leads</div>
+            <div style="font-size:0.7rem;color:var(--muted);">Organic Growth</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card-float float-1">
+        <div class="icon-circle">🎯</div>
+        <span>Local Pack Domination</span>
+      </div>
+      <div class="hero-card-float float-2">
+        <div class="icon-circle">⚡</div>
+        <span>Technical SEO Fixed</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ MARQUEE ═══════════════════ -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-item"><span>Technical SEO</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>Local SEO Expert India</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>E-commerce SEO</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>SEO Head</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>Google Search Console</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>AI-Assisted SEO</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>Ahrefs · SEMrush</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>GMB Optimization</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>Keyword Research</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>SEO Content Strategy</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>Programmatic SEO</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>AEO · GEO</span><span class="marquee-dot"></span></div>
+    <!-- duplicate -->
+    <div class="marquee-item"><span>Technical SEO</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>Local SEO Expert India</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>E-commerce SEO</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>SEO Head</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>Google Search Console</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>AI-Assisted SEO</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>Ahrefs · SEMrush</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>GMB Optimization</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>Keyword Research</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>SEO Content Strategy</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>Programmatic SEO</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>AEO · GEO</span><span class="marquee-dot"></span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SERVICES ═══════════════════ -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="reveal" style="max-width:600px;margin-bottom:3rem;">
+      <span class="eyebrow">Full-Stack Digital Growth Services</span>
+      <div class="divider"></div>
+      <h2 class="display display-lg" style="margin-bottom:0.75rem;">Every kind of SEO.<br>One consistent standard.</h2>
+      <p style="color:var(--muted);line-height:1.7;">From search engines to social, I cover every channel that drives organic growth — with a consulting-side that actually moves the needle.</p>
+    </div>
+
+    <div class="grid-3" style="gap:1.25rem;">
+
+      <div class="service-card reveal delay-1">
+        <div class="service-icon">🔍</div>
+        <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.6rem;color:var(--ink);">Search Engine Optimization (SEO)</h3>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.65;margin-bottom:1rem;">Full-funnel SEO from audit to execution. Technical fixes, on-page optimization, content strategy, and link building — all mapped to rankings that drive leads.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="tag tag-green">On-Page</span><span class="tag tag-green">Technical</span><span class="tag tag-green">Off-Page</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal delay-2">
+        <div class="service-icon">🌐</div>
+        <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.6rem;color:var(--ink);">Browser Engine Optimization (BEO)</h3>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.65;margin-bottom:1rem;">Optimizing your brand presence across Bing, DuckDuckGo, and other search engines beyond Google — expanding your organic reach to every search touchpoint.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="tag tag-green">Bing SEO</span><span class="tag tag-green">Multi-Engine</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal delay-3">
+        <div class="service-icon">🤖</div>
+        <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.6rem;color:var(--ink);">Generative Engine Optimization (GEO)</h3>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.65;margin-bottom:1rem;">Building content structures that get cited by AI search engines — ChatGPT, Perplexity, Google AI Overviews — so your brand appears in the next generation of search results.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="tag tag-green">AEO</span><span class="tag tag-green">AI Search</span><span class="tag tag-green">GEO</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal delay-1">
+        <div class="service-icon">🗺️</div>
+        <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.6rem;color:var(--ink);">Local SEO & GMB Optimization</h3>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.65;margin-bottom:1rem;">Dominating the local pack for city-specific searches. Google Business Profile optimization, local citation building, review strategy, and geo-targeted landing pages.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="tag tag-green">GMB</span><span class="tag tag-green">Local Pack</span><span class="tag tag-green">Citations</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal delay-2">
+        <div class="service-icon">🌐</div>
+        <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.6rem;color:var(--ink);">Web Development & SEO Landing Pages</h3>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.65;margin-bottom:1rem;">Building or optimizing pages that rank AND convert. Intent-mapped landing pages, programmatic city pages, and CRO-focused web structures.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="tag tag-green">Landing Pages</span><span class="tag tag-green">CRO</span><span class="tag tag-green">WordPress</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal delay-3">
+        <div class="service-icon">📱</div>
+        <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.6rem;color:var(--ink);">Social Media Management</h3>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.65;margin-bottom:1rem;">Strategic social content that supports SEO authority — brand mentions, link amplification, and consistent content that drives signals across search and social.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="tag tag-green">Content</span><span class="tag tag-green">Brand Building</span><span class="tag tag-green">Engagement</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ TOOLS ═══════════════════ -->
+<section id="tools" class="section section-alt">
+  <div class="container">
+    <div class="reveal" style="max-width:600px;margin-bottom:3rem;">
+      <span class="eyebrow">Tools I Work With</span>
+      <div class="divider"></div>
+      <h2 class="display display-lg" style="margin-bottom:0.75rem;">The full SEO stack.<br>Used daily.</h2>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:3rem;" class="reveal">
+      <div class="tool-chip">📊 Google Analytics 4</div>
+      <div class="tool-chip">🔍 Google Search Console</div>
+      <div class="tool-chip">📈 Ahrefs</div>
+      <div class="tool-chip">🎯 SEMrush</div>
+      <div class="tool-chip">🐸 Screaming Frog</div>
+      <div class="tool-chip">💡 Google Keyword Planner</div>
+      <div class="tool-chip">🔑 Ubersuggest</div>
+      <div class="tool-chip">⭐ Rank Math</div>
+      <div class="tool-chip">🌿 Yoast SEO</div>
+      <div class="tool-chip">🔧 WordPress</div>
+      <div class="tool-chip">🎨 Canva</div>
+      <div class="tool-chip">🤖 ChatGPT</div>
+      <div class="tool-chip">✨ Claude AI</div>
+      <div class="tool-chip">📍 Google Business Profile</div>
+      <div class="tool-chip">📌 Google Tag Manager</div>
+      <div class="tool-chip">📉 Looker Studio</div>
+      <div class="tool-chip">💼 Moz Pro</div>
+      <div class="tool-chip">🗂️ Notion</div>
+    </div>
+
+    <!-- Skill bars -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="reveal" id="tools-grid">
+      <div class="reveal-left">
+        <h3 style="font-weight:600;font-size:1rem;margin-bottom:1.5rem;color:var(--ink);">Core SEO Expertise</h3>
+        <div class="skill-bar">
+          <div class="skill-bar-header"><span style="font-size:0.83rem;color:var(--ink);">Technical SEO</span><span style="font-size:0.75rem;color:var(--g2);font-family:'JetBrains Mono',monospace;">Expert</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-header"><span style="font-size:0.83rem;color:var(--ink);">On-Page SEO</span><span style="font-size:0.75rem;color:var(--g2);font-family:'JetBrains Mono',monospace;">Expert</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-header"><span style="font-size:0.83rem;color:var(--ink);">Local SEO & GMB</span><span style="font-size:0.75rem;color:var(--g2);font-family:'JetBrains Mono',monospace;">Expert</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="93"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-header"><span style="font-size:0.83rem;color:var(--ink);">E-commerce SEO</span><span style="font-size:0.75rem;color:var(--g2);font-family:'JetBrains Mono',monospace;">Advanced</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-header"><span style="font-size:0.83rem;color:var(--ink);">SEO Content Strategy</span><span style="font-size:0.75rem;color:var(--g2);font-family:'JetBrains Mono',monospace;">Advanced</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="87"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-header"><span style="font-size:0.83rem;color:var(--ink);">AI-Assisted SEO Workflows</span><span style="font-size:0.75rem;color:var(--g2);font-family:'JetBrains Mono',monospace;">Advanced</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-header"><span style="font-size:0.83rem;color:var(--ink);">Programmatic SEO</span><span style="font-size:0.75rem;color:var(--g2);font-family:'JetBrains Mono',monospace;">Advanced</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+        </div>
+      </div>
+
+      <!-- Client Ranking Slider -->
+      <div class="reveal-right" style="width:100%;">
+        <div style="margin-bottom:1.5rem;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--g2);display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+            <span style="display:inline-block;width:16px;height:2px;background:var(--g2);border-radius:2px;"></span>
+            Proven Results
+          </span>
+          <h3 style="font-family:'DM Serif Display',Georgia,serif;font-size:clamp(1.4rem,2.5vw,2rem);font-weight:400;color:var(--ink);line-height:1.1;letter-spacing:-0.01em;">
+            Client Ranking Wins —
+            <span style="color:var(--g2);font-style:italic;">1st Page of Google</span>
+          </h3>
+          <div style="width:48px;height:3px;background:linear-gradient(90deg,var(--g3),var(--g2));border-radius:3px;margin-top:0.6rem;"></div>
+        </div>
+
+        <!-- Slider wrapper -->
+        <div style="position:relative;">
+          <div id="kw-slider" style="overflow:hidden;border-radius:var(--radius);">
+            <div id="kw-track" style="display:flex;gap:1rem;transition:transform 0.45s cubic-bezier(0.4,0,0.2,1);will-change:transform;">
+
+              <!-- Card 1: Isheeta Gupta -->
+              <div class="kw-card" style="min-width:calc(50% - 0.5rem);background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);flex-shrink:0;">
+                <div style="background:var(--g2);padding:0.85rem 1rem;">
+                  <div style="font-weight:700;font-size:0.83rem;color:var(--white);">Isheeta Gupta Makeup Studio</div>
+                  <div style="font-size:0.62rem;color:rgba(255,255,255,0.7);margin-top:0.15rem;">www.isheetaguptamakeupstudio.com</div>
+                </div>
+                <div style="padding:0.85rem 1rem;">
+                  <div style="font-size:0.58rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;text-transform:uppercase;color:var(--g2);margin-bottom:0.6rem;font-weight:600;">Keywords ranking on 1st Page of Google.com</div>
+                  <ul style="list-style:none;display:flex;flex-direction:column;gap:0;">
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Engagement HD Makeup in Delhi</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Permanent Hair Straightening in Delhi</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Pedicure Services in Delhi</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Global Hair Color Services in Delhi</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Engagement HD Makeup in Goa</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Engagement HD Makeup in Punjab</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;">Engagement HD Makeup in Adarsh Nagar</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Card 2: Maskeen Toys -->
+              <div class="kw-card" style="min-width:calc(50% - 0.5rem);background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);flex-shrink:0;">
+                <div style="background:var(--g2);padding:0.85rem 1rem;">
+                  <div style="font-weight:700;font-size:0.83rem;color:var(--white);">Maskeen Toys Pvt. Ltd</div>
+                  <div style="font-size:0.62rem;color:rgba(255,255,255,0.7);margin-top:0.15rem;">www.playschooltoy.com</div>
+                </div>
+                <div style="padding:0.85rem 1rem;">
+                  <div style="font-size:0.58rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;text-transform:uppercase;color:var(--g2);margin-bottom:0.6rem;font-weight:600;">Keywords ranking on 1st Page of Google.com</div>
+                  <ul style="list-style:none;display:flex;flex-direction:column;gap:0;">
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Kindergarten Furniture Manufacturers</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">School Toys Suppliers</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Inflatable Manufacturers</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Kids Plastic Toys Manufacturers</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Preschool Furniture Manufacturers</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Kindergarten Furniture Manufacturers in UAE</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;">School Toys Suppliers in UAE</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Card 3: Alokik Astro -->
+              <div class="kw-card" style="min-width:calc(50% - 0.5rem);background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);flex-shrink:0;">
+                <div style="background:var(--g2);padding:0.85rem 1rem;">
+                  <div style="font-weight:700;font-size:0.83rem;color:var(--white);">Alokik Astro</div>
+                  <div style="font-size:0.62rem;color:rgba(255,255,255,0.7);margin-top:0.15rem;">www.alokikastro.com</div>
+                </div>
+                <div style="padding:0.85rem 1rem;">
+                  <div style="font-size:0.58rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;text-transform:uppercase;color:var(--g2);margin-bottom:0.6rem;font-weight:600;">Keywords ranking on 1st Page of Google.com</div>
+                  <ul style="list-style:none;display:flex;flex-direction:column;gap:0;">
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Shanti Puja Astrologer</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Vedic Janam Kundli Astrologer</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Vashikaran Symptoms or Signs</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Surya Puja Astrologer</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Astrology Spell Specialist and Spell Caster</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Vedic Janam Kundli Astrologer in Rajasthan</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;">Vashikaran Symptoms or Signs in Rajasthan</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Card 4: Baghel Agro -->
+              <div class="kw-card" style="min-width:calc(50% - 0.5rem);background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);flex-shrink:0;">
+                <div style="background:var(--g2);padding:0.85rem 1rem;">
+                  <div style="font-weight:700;font-size:0.83rem;color:var(--white);">Baghel Agro Industries</div>
+                  <div style="font-size:0.62rem;color:rgba(255,255,255,0.7);margin-top:0.15rem;">www.agroexporters.net</div>
+                </div>
+                <div style="padding:0.85rem 1rem;">
+                  <div style="font-size:0.58rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;text-transform:uppercase;color:var(--g2);margin-bottom:0.6rem;font-weight:600;">Keywords ranking on 1st Page of Google.com</div>
+                  <ul style="list-style:none;display:flex;flex-direction:column;gap:0;">
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Food Grain Manufacturers</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Rice Exporters in Ranchi</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Pulse Manufacturers in Ranchi</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Moong Dal Manufacturers in Ranchi</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Urad Dal Manufacturers in Ranchi</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Food Grain Manufacturers in Ranchi</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;">Rice Manufacturers in Ranchi</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Card 5: SK Infosolutions -->
+              <div class="kw-card" style="min-width:calc(50% - 0.5rem);background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);flex-shrink:0;">
+                <div style="background:var(--g2);padding:0.85rem 1rem;">
+                  <div style="font-weight:700;font-size:0.83rem;color:var(--white);">SK Infosolutions</div>
+                  <div style="font-size:0.62rem;color:rgba(255,255,255,0.7);margin-top:0.15rem;">www.selold.com</div>
+                </div>
+                <div style="padding:0.85rem 1rem;">
+                  <div style="font-size:0.58rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;text-transform:uppercase;color:var(--g2);margin-bottom:0.6rem;font-weight:600;">Keywords ranking on 1st Page of Google.com</div>
+                  <ul style="list-style:none;display:flex;flex-direction:column;gap:0;">
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Sell Old/Used Laptop in Delhi</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Sell Old Laptop in Delhi</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Sell Old Apple Laptop in Delhi</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Buy Refurbished Laptops in Delhi</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Buy Refurbished HP Laptops in Delhi</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Sell Old/Used Laptop in Haryana</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;">Sell Old Apple Laptop in Haryana</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Card 6: Tooth n Care -->
+              <div class="kw-card" style="min-width:calc(50% - 0.5rem);background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);flex-shrink:0;">
+                <div style="background:var(--g2);padding:0.85rem 1rem;">
+                  <div style="font-weight:700;font-size:0.83rem;color:var(--white);">Tooth n Care</div>
+                  <div style="font-size:0.62rem;color:rgba(255,255,255,0.7);margin-top:0.15rem;">www.toothncare.com.au</div>
+                </div>
+                <div style="padding:0.85rem 1rem;">
+                  <div style="font-size:0.58rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;text-transform:uppercase;color:var(--g2);margin-bottom:0.6rem;font-weight:600;">Keywords ranking on 1st Page of Google.com</div>
+                  <ul style="list-style:none;display:flex;flex-direction:column;gap:0;">
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Dental Clinic in East Maitland</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">General Dentistry Service in East Maitland</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Regular Oral Hygiene Check Up in East Maitland</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Tooth Extraction Service in East Maitland</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Gum Treatment in East Maitland</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;border-bottom:1px solid var(--g5);">Dental Clinic in Aberglasslyn</li>
+                    <li style="font-size:0.75rem;color:var(--ink);padding:0.28rem 0;">General Dentistry Service in Aberglasslyn</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div><!-- /kw-track -->
+          </div><!-- /kw-slider -->
+
+          <!-- Prev / Next buttons -->
+          <button id="kw-prev" aria-label="Previous" style="position:absolute;top:50%;left:-18px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--white);border:1.5px solid var(--border);box-shadow:var(--shadow);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--g2);transition:all 0.2s;z-index:10;" onmouseover="this.style.background='var(--g2)';this.style.color='white'" onmouseout="this.style.background='var(--white)';this.style.color='var(--g2)'">‹</button>
+          <button id="kw-next" aria-label="Next" style="position:absolute;top:50%;right:-18px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--white);border:1.5px solid var(--border);box-shadow:var(--shadow);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--g2);transition:all 0.2s;z-index:10;" onmouseover="this.style.background='var(--g2)';this.style.color='white'" onmouseout="this.style.background='var(--white)';this.style.color='var(--g2)'">›</button>
+        </div>
+
+        <!-- Dot indicators -->
+        <div id="kw-dots" style="display:flex;justify-content:center;gap:0.5rem;margin-top:1rem;">
+          <span class="kw-dot" style="width:8px;height:8px;border-radius:50%;background:var(--g2);cursor:pointer;transition:all 0.3s;"></span>
+          <span class="kw-dot" style="width:8px;height:8px;border-radius:50%;background:var(--g4);cursor:pointer;transition:all 0.3s;"></span>
+          <span class="kw-dot" style="width:8px;height:8px;border-radius:50%;background:var(--g4);cursor:pointer;transition:all 0.3s;"></span>
+          <span class="kw-dot" style="width:8px;height:8px;border-radius:50%;background:var(--g4);cursor:pointer;transition:all 0.3s;"></span>
+          <span class="kw-dot" style="width:8px;height:8px;border-radius:50%;background:var(--g4);cursor:pointer;transition:all 0.3s;"></span>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ CASE STUDIES ═══════════════════ -->
+<section id="work" class="section">
+  <div class="container">
+    <div class="reveal" style="max-width:600px;margin-bottom:3rem;">
+      <span class="eyebrow">Client Ranking Wins</span>
+      <div class="divider"></div>
+      <h2 class="display display-lg" style="margin-bottom:0.75rem;">Real projects.<br>Real results.</h2>
+      <p style="color:var(--muted);">Real businesses growing. Each case represents a different SEO challenge — and how I built the organic growth solution.</p>
+    </div>
+
+    <div class="grid-2" style="gap:1.5rem;">
+
+      <!-- CS 1 -->
+      <div class="case-card reveal delay-1">
+        <div class="case-header">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;">
+            <div>
+              <div style="font-size:0.68rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;opacity:0.7;margin-bottom:0.4rem;">CASE STUDY 01</div>
+              <h3 style="font-size:1.1rem;font-weight:600;">Multi-City Local Service Business</h3>
+              <div style="font-size:0.8rem;opacity:0.8;margin-top:0.2rem;">Local SEO · Lead Generation · GMB Optimization</div>
+            </div>
+            <span style="background:rgba(255,255,255,0.15);padding:0.3rem 0.75rem;border-radius:100px;font-size:0.72rem;font-weight:500;">Local SEO</span>
+          </div>
+        </div>
+        <div class="case-body">
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;"><strong style="color:var(--ink);">Challenge:</strong> A home services business operating across multiple cities had near-zero organic visibility. Each city branch had no dedicated web presence and was losing leads to local competitors.</p>
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;"><strong style="color:var(--ink);">Strategy:</strong> Built a complete local SEO architecture — individual city landing pages optimized for geo-specific keywords, GMB profiles optimized per location, local citation building, and a structured review acquisition strategy.</p>
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;"><strong style="color:var(--ink);">Outcome:</strong> Business began ranking in local pack results across multiple cities within 3–4 months. Organic lead volume increased significantly, reducing paid ad dependency for local lead generation.</p>
+          <div class="case-meta">
+            <div class="case-meta-item"><div class="case-meta-label">Focus</div><div class="case-meta-val">Local Pack + Lead Gen</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Timeline</div><div class="case-meta-val">3–4 Months</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Tools</div><div class="case-meta-val">Ahrefs · GSC · GBP</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Type</div><div class="case-meta-val">Service Business</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS 2 -->
+      <div class="case-card reveal delay-2">
+        <div class="case-header">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;">
+            <div>
+              <div style="font-size:0.68rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;opacity:0.7;margin-bottom:0.4rem;">CASE STUDY 02</div>
+              <h3 style="font-size:1.1rem;font-weight:600;">E-Commerce Store — 500+ Products</h3>
+              <div style="font-size:0.8rem;opacity:0.8;margin-top:0.2rem;">Technical SEO · Category Optimization · Schema</div>
+            </div>
+            <span style="background:rgba(255,255,255,0.15);padding:0.3rem 0.75rem;border-radius:100px;font-size:0.72rem;font-weight:500;">E-commerce SEO</span>
+          </div>
+        </div>
+        <div class="case-body">
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;"><strong style="color:var(--ink);">Challenge:</strong> 500+ product store with decent traffic but poor conversion. A technical audit revealed crawl issues, thin category pages, duplicate descriptions, and missing schema suppressing rich results.</p>
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;"><strong style="color:var(--ink);">Strategy:</strong> Full Screaming Frog crawl audit, resolved redirect chains, implemented product and breadcrumb schema, rewrote category pages with buyer-intent keywords, restructured internal linking.</p>
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;"><strong style="color:var(--ink);">Outcome:</strong> Rich results appeared in SERPs. Organic traffic to category pages showed consistent growth over the following quarter with measurable improvements in organic revenue contribution.</p>
+          <div class="case-meta">
+            <div class="case-meta-item"><div class="case-meta-label">Focus</div><div class="case-meta-val">Technical + Category SEO</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Impact</div><div class="case-meta-val">Rich Results Gained</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Tools</div><div class="case-meta-val">Screaming Frog · GSC</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Type</div><div class="case-meta-val">E-commerce</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS 3 -->
+      <div class="case-card reveal delay-1">
+        <div class="case-header">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;">
+            <div>
+              <div style="font-size:0.68rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;opacity:0.7;margin-bottom:0.4rem;">CASE STUDY 03</div>
+              <h3 style="font-size:1.1rem;font-weight:600;">Educational Institution — School SEO</h3>
+              <div style="font-size:0.8rem;opacity:0.8;margin-top:0.2rem;">Content SEO · Programmatic · Admission Intent</div>
+            </div>
+            <span style="background:rgba(255,255,255,0.15);padding:0.3rem 0.75rem;border-radius:100px;font-size:0.72rem;font-weight:500;">Education SEO</span>
+          </div>
+        </div>
+        <div class="case-body">
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;"><strong style="color:var(--ink);">Challenge:</strong> A school with strong offline reputation had minimal online visibility for admission-related queries. Prospective parents were not finding them when searching for schools in their city.</p>
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;"><strong style="color:var(--ink);">Strategy:</strong> Built keyword strategy targeting parent search intent across admission queries, fee comparison keywords, and curriculum searches. Developed pillar pages, FAQ content, and location-specific landing pages.</p>
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;"><strong style="color:var(--ink);">Outcome:</strong> Pages ranked in top positions for city-specific school queries. Meaningful growth in organic impressions contributing to measurable increase in website-driven enquiry volume.</p>
+          <div class="case-meta">
+            <div class="case-meta-item"><div class="case-meta-label">Focus</div><div class="case-meta-val">Admission Intent</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Impact</div><div class="case-meta-val">Top 3 Rankings</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Tools</div><div class="case-meta-val">SEMrush · GSC · WordPress</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Type</div><div class="case-meta-val">Education / School</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS 4 -->
+      <div class="case-card reveal delay-2">
+        <div class="case-header">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;">
+            <div>
+              <div style="font-size:0.68rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;opacity:0.7;margin-bottom:0.4rem;">CASE STUDY 04</div>
+              <h3 style="font-size:1.1rem;font-weight:600;">Astrology Website — Niche SEO</h3>
+              <div style="font-size:0.8rem;opacity:0.8;margin-top:0.2rem;">Content SEO · Off-Page · Niche Authority</div>
+            </div>
+            <span style="background:rgba(255,255,255,0.15);padding:0.3rem 0.75rem;border-radius:100px;font-size:0.72rem;font-weight:500;">Niche SEO</span>
+          </div>
+        </div>
+        <div class="case-body">
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;"><strong style="color:var(--ink);">Challenge:</strong> An astrology platform competing in a highly competitive online space needed to build topical authority and rank for high-search-volume spiritual and astrology-related queries.</p>
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;"><strong style="color:var(--ink);">Strategy:</strong> Developed a topic cluster strategy around astrology services, horoscope content, and spiritual wellness. Built a content calendar with pillar and supporting articles, combined with niche-relevant link building and E-E-A-T optimization.</p>
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;"><strong style="color:var(--ink);">Outcome:</strong> The site built consistent topical authority in the niche. Organic traffic from spiritual and astrology queries grew steadily, with several articles ranking on the first page for competitive search terms.</p>
+          <div class="case-meta">
+            <div class="case-meta-item"><div class="case-meta-label">Focus</div><div class="case-meta-val">Topical Authority</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Impact</div><div class="case-meta-val">Niche Page 1 Rankings</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Tools</div><div class="case-meta-val">Ahrefs · SEMrush · WP</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Type</div><div class="case-meta-val">Astrology / Wellness</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS 5 -->
+      <div class="case-card reveal delay-1">
+        <div class="case-header">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;">
+            <div>
+              <div style="font-size:0.68rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;opacity:0.7;margin-bottom:0.4rem;">CASE STUDY 05</div>
+              <h3 style="font-size:1.1rem;font-weight:600;">Agency Programmatic SEO Campaign</h3>
+              <div style="font-size:0.8rem;opacity:0.8;margin-top:0.2rem;">Programmatic SEO · AI Workflows · Scale</div>
+            </div>
+            <span style="background:rgba(255,255,255,0.15);padding:0.3rem 0.75rem;border-radius:100px;font-size:0.72rem;font-weight:500;">Programmatic</span>
+          </div>
+        </div>
+        <div class="case-body">
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;"><strong style="color:var(--ink);">Challenge:</strong> Per4mance Guru needed to build organic presence across hundreds of city and service-specific keyword combinations — at a scale that traditional content production couldn't match.</p>
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;"><strong style="color:var(--ink);">Strategy:</strong> Designed an AI-assisted programmatic SEO workflow — combining Claude and ChatGPT for structured content generation at scale. Built 100+ city/service landing pages with automated internal linking patterns and GSC tracking to monitor indexation.</p>
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;"><strong style="color:var(--ink);">Outcome:</strong> Hundreds of pages indexed and began accumulating impressions for long-tail city-specific keywords within weeks. Content production time reduced significantly while maintaining quality above AI-generated average.</p>
+          <div class="case-meta">
+            <div class="case-meta-item"><div class="case-meta-label">Focus</div><div class="case-meta-val">City Pages at Scale</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Pages Built</div><div class="case-meta-val">100+ City Pages</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Tools</div><div class="case-meta-val">Claude · ChatGPT · GSC</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Type</div><div class="case-meta-val">Agency / Programmatic</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS 6 -->
+      <div class="case-card reveal delay-2">
+        <div class="case-header">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;">
+            <div>
+              <div style="font-size:0.68rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;opacity:0.7;margin-bottom:0.4rem;">CASE STUDY 06</div>
+              <h3 style="font-size:1.1rem;font-weight:600;">Service Business — 0 to Page 1</h3>
+              <div style="font-size:0.8rem;opacity:0.8;margin-top:0.2rem;">Full SEO Build · Authority · Lead Gen</div>
+            </div>
+            <span style="background:rgba(255,255,255,0.15);padding:0.3rem 0.75rem;border-radius:100px;font-size:0.72rem;font-weight:500;">Lead Gen SEO</span>
+          </div>
+        </div>
+        <div class="case-body">
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;"><strong style="color:var(--ink);">Challenge:</strong> A professional services firm had a newly built website with no domain authority, no backlinks, and no content beyond basic service pages. Entirely dependent on referrals.</p>
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;"><strong style="color:var(--ink);">Strategy:</strong> Built SEO from the ground up — keyword strategy, full on-page optimization, technical health setup, content calendar targeting both informational and transactional queries, plus authority building through guest posts and directories.</p>
+          <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;"><strong style="color:var(--ink);">Outcome:</strong> Core service keywords began ranking on page one within 6 months. The site developed a consistent pipeline of organic inquiries — in some cases overtaking paid traffic for specific service categories.</p>
+          <div class="case-meta">
+            <div class="case-meta-item"><div class="case-meta-label">Focus</div><div class="case-meta-val">0 → Page 1</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Timeline</div><div class="case-meta-val">6 Months</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Tools</div><div class="case-meta-val">Ahrefs · Rank Math · GSC</div></div>
+            <div class="case-meta-item"><div class="case-meta-label">Type</div><div class="case-meta-val">Professional Services</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Real Traffic stats row -->
+    <div style="margin-top:3rem;padding:2.5rem;background:var(--g6);border:1px solid var(--g4);border-radius:var(--radius);" class="reveal">
+      <div style="text-align:center;margin-bottom:2rem;">
+        <span class="eyebrow">Real Traffic. Real Data. Real Results.</span>
+        <div class="divider" style="margin:0.75rem auto;"></div>
+        <p style="color:var(--muted);font-size:0.88rem;">Benchmark results across client accounts — verified via Google Search Console.</p>
+      </div>
+      <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:2rem;margin-bottom:2rem;">
+        <div style="text-align:center;">
+          <div style="font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--g2);"><span class="counter-num" data-target="150">0</span>K+</div>
+          <div style="font-size:0.75rem;color:var(--muted);margin-top:0.2rem;">Organic Clicks Delivered</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--g2);">170<span style="font-size:1.5rem;">M+</span></div>
+          <div style="font-size:0.75rem;color:var(--muted);margin-top:0.2rem;">Total Search Impressions</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--g2);">4</div>
+          <div style="font-size:0.75rem;color:var(--muted);margin-top:0.2rem;">Countries Served</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--g2);">12</div>
+          <div style="font-size:0.75rem;color:var(--muted);margin-top:0.2rem;">Active Niches</div>
+        </div>
+      </div>
+      <div style="text-align:center;">
+        <a href="#gsc-section" class="btn btn-primary" style="display:inline-flex;gap:0.5rem;align-items:center;">
+          📊 View Live GSC Screenshots
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ GSC SCREENSHOTS ═══════════════════ -->
+<section class="section section-alt" id="gsc-section">
+  <div class="container">
+    <div class="reveal" style="max-width:650px;margin-bottom:3rem;">
+      <span class="eyebrow">Proof of Performance</span>
+      <div class="divider"></div>
+      <h2 class="display display-lg" style="margin-bottom:0.75rem;">Live GSC Screenshots</h2>
+      <p style="color:var(--muted);line-height:1.7;">Real Google Search Console data from actual client accounts — not mock-ups, not stock images. Every graph tells a real organic growth story.</p>
+    </div>
+
+    <!-- GSC Grid -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;" id="gsc-grid">
+
+      <!-- GSC 1 -->
+      <div class="reveal delay-1" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:all 0.35s;cursor:zoom-in;" onclick="openLightbox('gsc1.png','dreamlandpublications.com · 69.5K Clicks · 10.8M Impressions')" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='var(--shadow-lg)';this.style.borderColor='var(--g3)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow)';this.style.borderColor='var(--border)'">
+        <div style="position:relative;overflow:hidden;">
+          <img src="gsc1.png" alt="GSC - dreamlandpublications.com performance" loading="lazy" style="width:100%;display:block;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"/>
+          <div style="position:absolute;top:0.6rem;right:0.6rem;background:var(--g2);color:white;font-size:0.6rem;font-family:'JetBrains Mono',monospace;padding:0.2rem 0.6rem;border-radius:100px;letter-spacing:0.06em;">GSC LIVE</div>
+        </div>
+        <div style="padding:0.85rem 1rem;">
+          <div style="font-weight:600;font-size:0.82rem;color:var(--ink);margin-bottom:0.35rem;">dreamlandpublications.com</div>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <span style="font-size:0.7rem;color:var(--g1);font-weight:600;background:var(--g6);border:1px solid var(--g4);padding:0.15rem 0.5rem;border-radius:4px;">📈 69.5K Clicks</span>
+            <span style="font-size:0.7rem;color:var(--g1);font-weight:600;background:var(--g6);border:1px solid var(--g4);padding:0.15rem 0.5rem;border-radius:4px;">👁 10.8M Impressions</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GSC 2 -->
+      <div class="reveal delay-2" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:all 0.35s;cursor:zoom-in;" onclick="openLightbox('gsc2.png','dreamlandpublications.com · 69.5K Clicks · 10.8M Impressions')" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='var(--shadow-lg)';this.style.borderColor='var(--g3)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow)';this.style.borderColor='var(--border)'">
+        <div style="position:relative;overflow:hidden;">
+          <img src="gsc2.png" alt="GSC - dreamlandpublications.com detailed view" loading="lazy" style="width:100%;display:block;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"/>
+          <div style="position:absolute;top:0.6rem;right:0.6rem;background:var(--g2);color:white;font-size:0.6rem;font-family:'JetBrains Mono',monospace;padding:0.2rem 0.6rem;border-radius:100px;letter-spacing:0.06em;">GSC LIVE</div>
+        </div>
+        <div style="padding:0.85rem 1rem;">
+          <div style="font-weight:600;font-size:0.82rem;color:var(--ink);margin-bottom:0.35rem;">dreamlandpublications.com</div>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <span style="font-size:0.7rem;color:var(--g1);font-weight:600;background:var(--g6);border:1px solid var(--g4);padding:0.15rem 0.5rem;border-radius:4px;">📈 69.5K Clicks</span>
+            <span style="font-size:0.7rem;color:var(--g1);font-weight:600;background:var(--g6);border:1px solid var(--g4);padding:0.15rem 0.5rem;border-radius:4px;">👁 10.8M Impressions</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GSC 3 -->
+      <div class="reveal delay-3" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:all 0.35s;cursor:zoom-in;" onclick="openLightbox('gsc3.png','superontechnik.com · 9.01K Clicks · 258K Impressions')" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='var(--shadow-lg)';this.style.borderColor='var(--g3)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow)';this.style.borderColor='var(--border)'">
+        <div style="position:relative;overflow:hidden;">
+          <img src="gsc3.png" alt="GSC - superontechnik.com performance" loading="lazy" style="width:100%;display:block;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"/>
+          <div style="position:absolute;top:0.6rem;right:0.6rem;background:var(--g2);color:white;font-size:0.6rem;font-family:'JetBrains Mono',monospace;padding:0.2rem 0.6rem;border-radius:100px;letter-spacing:0.06em;">GSC LIVE</div>
+        </div>
+        <div style="padding:0.85rem 1rem;">
+          <div style="font-weight:600;font-size:0.82rem;color:var(--ink);margin-bottom:0.35rem;">superontechnik.com</div>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <span style="font-size:0.7rem;color:var(--g1);font-weight:600;background:var(--g6);border:1px solid var(--g4);padding:0.15rem 0.5rem;border-radius:4px;">📈 9.01K Clicks</span>
+            <span style="font-size:0.7rem;color:var(--g1);font-weight:600;background:var(--g6);border:1px solid var(--g4);padding:0.15rem 0.5rem;border-radius:4px;">👁 258K Impressions</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GSC 4 -->
+      <div class="reveal delay-1" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:all 0.35s;cursor:zoom-in;" onclick="openLightbox('gsc4.png','superontechnik.com · 9.01K Clicks · 258K Impressions')" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='var(--shadow-lg)';this.style.borderColor='var(--g3)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow)';this.style.borderColor='var(--border)'">
+        <div style="position:relative;overflow:hidden;">
+          <img src="gsc4.png" alt="GSC - superontechnik.com queries view" loading="lazy" style="width:100%;display:block;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"/>
+          <div style="position:absolute;top:0.6rem;right:0.6rem;background:var(--g2);color:white;font-size:0.6rem;font-family:'JetBrains Mono',monospace;padding:0.2rem 0.6rem;border-radius:100px;letter-spacing:0.06em;">GSC LIVE</div>
+        </div>
+        <div style="padding:0.85rem 1rem;">
+          <div style="font-weight:600;font-size:0.82rem;color:var(--ink);margin-bottom:0.35rem;">superontechnik.com</div>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <span style="font-size:0.7rem;color:var(--g1);font-weight:600;background:var(--g6);border:1px solid var(--g4);padding:0.15rem 0.5rem;border-radius:4px;">📈 9.01K Clicks</span>
+            <span style="font-size:0.7rem;color:var(--g1);font-weight:600;background:var(--g6);border:1px solid var(--g4);padding:0.15rem 0.5rem;border-radius:4px;">👁 258K Impressions</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GSC 5 -->
+      <div class="reveal delay-2" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:all 0.35s;cursor:zoom-in;" onclick="openLightbox('gsc5.png','denvaxindia.com · 75.2K Clicks · 4.04M Impressions')" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='var(--shadow-lg)';this.style.borderColor='var(--g3)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow)';this.style.borderColor='var(--border)'">
+        <div style="position:relative;overflow:hidden;">
+          <img src="gsc5.png" alt="GSC - denvaxindia.com performance" loading="lazy" style="width:100%;display:block;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"/>
+          <div style="position:absolute;top:0.6rem;right:0.6rem;background:var(--g2);color:white;font-size:0.6rem;font-family:'JetBrains Mono',monospace;padding:0.2rem 0.6rem;border-radius:100px;letter-spacing:0.06em;">GSC LIVE</div>
+        </div>
+        <div style="padding:0.85rem 1rem;">
+          <div style="font-weight:600;font-size:0.82rem;color:var(--ink);margin-bottom:0.35rem;">denvaxindia.com</div>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <span style="font-size:0.7rem;color:var(--g1);font-weight:600;background:var(--g6);border:1px solid var(--g4);padding:0.15rem 0.5rem;border-radius:4px;">📈 75.2K Clicks</span>
+            <span style="font-size:0.7rem;color:var(--g1);font-weight:600;background:var(--g6);border:1px solid var(--g4);padding:0.15rem 0.5rem;border-radius:4px;">👁 4.04M Impressions</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(26,43,36,0.92);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:2rem;" onclick="closeLightbox()">
+  <div style="position:relative;max-width:1100px;width:100%;" onclick="event.stopPropagation()">
+    <button onclick="closeLightbox()" style="position:absolute;top:-2.5rem;right:0;background:transparent;border:none;color:white;font-size:1.5rem;cursor:pointer;opacity:0.8;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">✕ Close</button>
+    <img id="lightbox-img" src="" alt="" style="width:100%;border-radius:var(--radius);box-shadow:0 24px 80px rgba(0,0,0,0.5);"/>
+    <div id="lightbox-caption" style="text-align:center;margin-top:1rem;color:rgba(255,255,255,0.8);font-size:0.85rem;font-family:'JetBrains Mono',monospace;"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════ PROCESS ═══════════════════ -->
+<section id="process" class="section section-alt">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto 4rem;">
+      <span class="eyebrow">My SEO Process</span>
+      <div class="divider" style="margin:0.75rem auto;"></div>
+      <h2 class="display display-lg" style="margin-bottom:0.75rem;">A structured, repeatable<br>approach that works.</h2>
+      <p style="color:var(--muted);">Every project starts with the same rigorous foundation — the application changes, the process doesn't.</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-item reveal delay-1">
+        <div class="process-num">01</div>
+        <h3 style="font-weight:600;font-size:0.95rem;margin-bottom:0.5rem;color:var(--ink);">Discover & Audit</h3>
+        <p style="font-size:0.8rem;color:var(--muted);line-height:1.65;">Full technical crawl, site health check, competitor benchmark, and backlink profile analysis.</p>
+      </div>
+      <div class="process-item reveal delay-2">
+        <div class="process-num">02</div>
+        <h3 style="font-weight:600;font-size:0.95rem;margin-bottom:0.5rem;color:var(--ink);">Strategy & Roadmap</h3>
+        <p style="font-size:0.8rem;color:var(--muted);line-height:1.65;">Keyword research, intent mapping, content architecture, and a prioritized 90-day action plan.</p>
+      </div>
+      <div class="process-item reveal delay-3">
+        <div class="process-num">03</div>
+        <h3 style="font-weight:600;font-size:0.95rem;margin-bottom:0.5rem;color:var(--ink);">Execution</h3>
+        <p style="font-size:0.8rem;color:var(--muted);line-height:1.65;">On-page optimization, technical fixes, content production, link acquisition — all executed systematically.</p>
+      </div>
+      <div class="process-item reveal delay-4">
+        <div class="process-num">04</div>
+        <h3 style="font-weight:600;font-size:0.95rem;margin-bottom:0.5rem;color:var(--ink);">Track & Report</h3>
+        <p style="font-size:0.8rem;color:var(--muted);line-height:1.65;">GSC + GA4 tracking, keyword rank monitoring, monthly reporting, and continuous strategy refinement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ABOUT ═══════════════════ -->
+<section id="about" class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="grid-about">
+      <div class="reveal-left">
+        <span class="eyebrow">6 Years of Ranking Websites,<br>Now with AI.</span>
+        <div class="divider"></div>
+        <h2 class="display display-lg" style="margin-bottom:1.25rem;">Strategy first.<br>Rankings follow.</h2>
+        <p style="color:var(--muted);line-height:1.75;margin-bottom:1rem;">I'm Mohit Rey — SEO Head at <strong style="color:var(--ink);">Per4mance Guru</strong>, where I lead organic growth strategy across a portfolio of brands in India and internationally. Over 6+ years, I've learned that SEO that actually moves the needle isn't about shortcuts — it's about understanding what a business needs and what its customers are searching for.</p>
+        <p style="color:var(--muted);line-height:1.75;margin-bottom:1rem;">My work spans the full SEO stack: technical audits, on-page optimization, content architecture, local SEO, e-commerce SEO, programmatic city pages, and AI-assisted workflows. I've worked across local businesses, schools, service companies, astrology platforms, and e-commerce stores.</p>
+        <p style="color:var(--muted);line-height:1.75;margin-bottom:2rem;">Currently leading SEO across 50+ brands at Per4mance Guru — an AI-native performance marketing agency.</p>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.83rem;color:var(--ink);"><span style="color:var(--g2);">✓</span> Google Analytics Certified</div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.83rem;color:var(--ink);"><span style="color:var(--g2);">✓</span> Ahrefs SEO Specialist</div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.83rem;color:var(--ink);"><span style="color:var(--g2);">✓</span> Technical SEO Specialist</div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.83rem;color:var(--ink);"><span style="color:var(--g2);">✓</span> Digital Marketing Specialist</div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.83rem;color:var(--ink);"><span style="color:var(--g2);">✓</span> Freelance & Consulting</div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div class="card" style="text-align:center;padding:2rem 1rem;">
+            <div style="font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--g2);"><span class="counter-num" data-target="6">0</span>+</div>
+            <div style="font-size:0.78rem;color:var(--muted);margin-top:0.25rem;">Years Experience</div>
+          </div>
+          <div class="card" style="text-align:center;padding:2rem 1rem;">
+            <div style="font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--g2);"><span class="counter-num" data-target="50">0</span>+</div>
+            <div style="font-size:0.78rem;color:var(--muted);margin-top:0.25rem;">Happy Clients</div>
+          </div>
+          <div class="card" style="text-align:center;padding:2rem 1rem;">
+            <div style="font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--g2);">5</div>
+            <div style="font-size:0.78rem;color:var(--muted);margin-top:0.25rem;">Industries</div>
+          </div>
+          <div class="card" style="text-align:center;padding:2rem 1rem;">
+            <div style="font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--g2);">3</div>
+            <div style="font-size:0.78rem;color:var(--muted);margin-top:0.25rem;">Countries</div>
+          </div>
+        </div>
+        <div class="card card-mint" style="margin-top:1rem;padding:1.5rem;">
+          <div style="font-size:0.75rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;text-transform:uppercase;color:var(--g2);margin-bottom:0.75rem;">SEO Philosophy</div>
+          <p style="color:var(--ink2);font-size:0.88rem;line-height:1.7;font-style:italic;">"Rankings are the outcome. The work is understanding intent, solving content gaps, and building trust signals at scale — now supercharged with AI."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ TESTIMONIALS ═══════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:550px;margin:0 auto 3rem;">
+      <span class="eyebrow">What Clients Say</span>
+      <div class="divider" style="margin:0.75rem auto;"></div>
+      <h2 class="display display-md">Trusted by businesses<br>across industries.</h2>
+    </div>
+    <!-- Testimonial Slider -->
+    <div style="position:relative;">
+      <div id="testi-slider" style="overflow:hidden;border-radius:var(--radius);">
+        <div id="testi-track" style="display:flex;gap:1.5rem;transition:transform 0.45s cubic-bezier(0.4,0,0.2,1);will-change:transform;">
+
+          <!-- T1: Isheeta Gupta -->
+          <div class="testi-card" style="min-width:calc(33.333% - 1rem);flex-shrink:0;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);transition:all 0.3s;">
+            <div class="testimonial-quote">❝</div>
+            <div class="stars">★★★★★</div>
+            <p style="font-size:0.85rem;color:var(--muted);line-height:1.75;margin-bottom:1.25rem;font-style:italic;">Mohit completely transformed our makeup studio's local SEO. We were practically invisible on Google before — now we're ranking on page 1 for "Engagement HD Makeup" across Delhi, Goa, and Punjab. Inquiries are now consistent and growing every month.</p>
+            <div style="border-top:1px solid var(--border);padding-top:1rem;display:flex;align-items:center;gap:0.75rem;">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c);">I</div>
+                <div style="font-size:0.72rem;color:var(--muted);">Founder, Isheeta Gupta Makeup Studio</div>
+                <div style="font-size:0.65rem;color:var(--g2);font-family:'JetBrains Mono',monospace;margin-top:0.1rem;">isheetaguptamakeupstudio.com</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- T2: Maskeen Toys -->
+          <div class="testi-card" style="min-width:calc(33.333% - 1rem);flex-shrink:0;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);transition:all 0.3s;">
+            <div class="testimonial-quote">❝</div>
+            <div class="stars">★★★★★</div>
+            <p style="font-size:0.85rem;color:var(--muted);line-height:1.75;margin-bottom:1.25rem;font-style:italic;">Mohit's work got our B2B keywords — Kindergarten Furniture Manufacturers, School Toys Suppliers — ranking on page 1 across both India and UAE. International buyers are now finding us directly through Google. These are exactly the results we were looking for.</p>
+            <div style="border-top:1px solid var(--border);padding-top:1rem;display:flex;align-items:center;gap:0.75rem;">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#4facfe,#00f2fe);">M</div>
+              <div>
+                <div style="font-weight:600;font-size:0.88rem;color:var(--ink);">Manish Maskeen</div>
+                <div style="font-size:0.72rem;color:var(--muted);">Director, Maskeen Toys Pvt. Ltd</div>
+                <div style="font-size:0.65rem;color:var(--g2);font-family:'JetBrains Mono',monospace;margin-top:0.1rem;">playschooltoy.com</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- T3: Alokik Astro -->
+          <div class="testi-card" style="min-width:calc(33.333% - 1rem);flex-shrink:0;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);transition:all 0.3s;">
+            <div class="testimonial-quote">❝</div>
+            <div class="stars">★★★★★</div>
+            <p style="font-size:0.85rem;color:var(--muted);line-height:1.75;margin-bottom:1.25rem;font-style:italic;">The astrology niche is extremely competitive, but Mohit's content strategy got our keywords — Vedic Janam Kundli Astrologer, Vashikaran Symptoms — ranking across Rajasthan. We're now getting genuine clients through organic search who were never reachable before.</p>
+            <div style="border-top:1px solid var(--border);padding-top:1rem;display:flex;align-items:center;gap:0.75rem;">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#fa709a,#fee140);">A</div>
+              <div>
+                <div style="font-weight:600;font-size:0.88rem;color:var(--ink);">Alok Sharma</div>
+                <div style="font-size:0.72rem;color:var(--muted);">Founder, Alokik Astro</div>
+                <div style="font-size:0.65rem;color:var(--g2);font-family:'JetBrains Mono',monospace;margin-top:0.1rem;">alokikastro.com</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- T4: Baghel Agro -->
+          <div class="testi-card" style="min-width:calc(33.333% - 1rem);flex-shrink:0;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);transition:all 0.3s;">
+            <div class="testimonial-quote">❝</div>
+            <div class="stars">★★★★★</div>
+            <p style="font-size:0.85rem;color:var(--muted);line-height:1.75;margin-bottom:1.25rem;font-style:italic;">Mohit targeted Ranchi-specific keywords that actual buyers search for — "Rice Exporters in Ranchi", "Moong Dal Manufacturers" — and all of them are now on page 1. B2B inquiries coming directly from Google have increased noticeably. Very professional and result-focused approach.</p>
+            <div style="border-top:1px solid var(--border);padding-top:1rem;display:flex;align-items:center;gap:0.75rem;">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#43e97b,#38f9d7);">R</div>
+              <div>
+                <div style="font-weight:600;font-size:0.88rem;color:var(--ink);">Rajesh Baghel</div>
+                <div style="font-size:0.72rem;color:var(--muted);">Owner, Baghel Agro Industries</div>
+                <div style="font-size:0.65rem;color:var(--g2);font-family:'JetBrains Mono',monospace;margin-top:0.1rem;">agroexporters.net</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- T5: SK Infosolutions -->
+          <div class="testi-card" style="min-width:calc(33.333% - 1rem);flex-shrink:0;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);transition:all 0.3s;">
+            <div class="testimonial-quote">❝</div>
+            <div class="stars">★★★★★</div>
+            <p style="font-size:0.85rem;color:var(--muted);line-height:1.75;margin-bottom:1.25rem;font-style:italic;">Our refurbished laptop business has grown organically across Delhi and Haryana. "Buy Refurbished Laptops in Delhi", "Sell Old Apple Laptop" — all ranking on Google page 1 now. Mohit's approach is practical and result-oriented — no fluff, just rankings that actually bring customers.</p>
+            <div style="border-top:1px solid var(--border);padding-top:1rem;display:flex;align-items:center;gap:0.75rem;">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#667eea,#764ba2);">S</div>
+              <div>
+                <div style="font-weight:600;font-size:0.88rem;color:var(--ink);">Suresh Kumar</div>
+                <div style="font-size:0.72rem;color:var(--muted);">Founder, SK Infosolutions</div>
+                <div style="font-size:0.65rem;color:var(--g2);font-family:'JetBrains Mono',monospace;margin-top:0.1rem;">selold.com</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- T6: Tooth n Care -->
+          <div class="testi-card" style="min-width:calc(33.333% - 1rem);flex-shrink:0;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);transition:all 0.3s;">
+            <div class="testimonial-quote">❝</div>
+            <div class="stars">★★★★★</div>
+            <p style="font-size:0.85rem;color:var(--muted);line-height:1.75;margin-bottom:1.25rem;font-style:italic;">As a dental clinic in Australia, local SEO was critical for us. Mohit ranked us for "Dental Clinic in East Maitland", "Gum Treatment", and several Aberglasslyn keywords. New patient bookings from organic search have increased significantly. Excellent, professional work.</p>
+            <div style="border-top:1px solid var(--border);padding-top:1rem;display:flex;align-items:center;gap:0.75rem;">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#0fd850,#f9f047);">T</div>
+              <div>
+                <div style="font-weight:600;font-size:0.88rem;color:var(--ink);">Dr. Thomas</div>
+                <div style="font-size:0.72rem;color:var(--muted);">Owner, Tooth n Care Dental Clinic</div>
+                <div style="font-size:0.65rem;color:var(--g2);font-family:'JetBrains Mono',monospace;margin-top:0.1rem;">toothncare.com.au · East Maitland, AU</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Arrows -->
+      <button id="testi-prev" aria-label="Previous" style="position:absolute;top:50%;left:-18px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--white);border:1.5px solid var(--border);box-shadow:var(--shadow);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--g2);transition:all 0.2s;z-index:10;" onmouseover="this.style.background='var(--g2)';this.style.color='white'" onmouseout="this.style.background='var(--white)';this.style.color='var(--g2)'">‹</button>
+      <button id="testi-next" aria-label="Next" style="position:absolute;top:50%;right:-18px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--white);border:1.5px solid var(--border);box-shadow:var(--shadow);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--g2);transition:all 0.2s;z-index:10;" onmouseover="this.style.background='var(--g2)';this.style.color='white'" onmouseout="this.style.background='var(--white)';this.style.color='var(--g2)'">›</button>
+    </div>
+
+    <!-- Dots -->
+    <div id="testi-dots" style="display:flex;justify-content:center;gap:0.5rem;margin-top:1.5rem;">
+      <span class="td" style="width:20px;height:8px;border-radius:10px;background:var(--g2);cursor:pointer;transition:all 0.3s;display:inline-block;"></span>
+      <span class="td" style="width:8px;height:8px;border-radius:50%;background:var(--g4);cursor:pointer;transition:all 0.3s;display:inline-block;"></span>
+      <span class="td" style="width:8px;height:8px;border-radius:50%;background:var(--g4);cursor:pointer;transition:all 0.3s;display:inline-block;"></span>
+      <span class="td" style="width:8px;height:8px;border-radius:50%;background:var(--g4);cursor:pointer;transition:all 0.3s;display:inline-block;"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FAQ ═══════════════════ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;align-items:start;" id="faq-grid">
+      <div class="reveal-left">
+        <span class="eyebrow">FAQ</span>
+        <div class="divider"></div>
+        <h2 class="display display-lg" style="margin-bottom:1rem;">Questions<br>you might<br>have.</h2>
+        <p style="color:var(--muted);font-size:0.88rem;line-height:1.75;">Everything you need to know before we work together. Still have questions? Just WhatsApp me.</p>
+        <a href="https://wa.me/919521755820" target="_blank" class="btn btn-primary" style="margin-top:1.5rem;display:inline-flex;">💬 Ask me directly</a>
+      </div>
+      <div class="reveal-right">
+        <div class="faq-item">
+          <button class="faq-q">Do you work with international clients?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes! I currently work with clients across India, UAE, Australia, and Canada. All communication happens remotely via WhatsApp, email, and video calls. Time zone differences are never a problem.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How long does SEO take to show results?<span class="faq-icon">+</span></button>
+          <div class="faq-a">For most projects, initial ranking improvements are visible within 60–90 days. Significant traffic growth typically happens between 3–6 months. Local SEO can move faster — sometimes within 4–6 weeks for GMB/local pack rankings.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What industries have you worked in?<span class="faq-icon">+</span></button>
+          <div class="faq-a">25+ niches including beauty & makeup, education (schools), astrology & wellness, agro & food exports, tech/laptops, dental/healthcare, e-commerce, real estate, hospitality, B2B services, and more. I adapt my approach to each industry's search behaviour.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do you offer one-time audits or monthly retainers?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Both! I offer one-time comprehensive SEO audits with a full action roadmap, as well as monthly retainer packages where I handle ongoing SEO strategy, execution, and reporting. The right option depends on your current situation and goals.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do you use AI tools in your SEO workflow?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes — I use Claude, ChatGPT, and other AI tools to scale content production and keyword research without compromising quality. I also optimize content for AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) so your brand gets cited in AI search results like ChatGPT and Perplexity.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What does your SEO process look like?<span class="faq-icon">+</span></button>
+          <div class="faq-a">It starts with a deep audit → competitor analysis → keyword research & mapping → content strategy → on-page optimization → technical fixes → off-page authority building → monthly reporting. Every step is documented and transparent.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Can you help if my website traffic dropped suddenly?<span class="faq-icon">+</span></button>
+          <div class="faq-a">Absolutely. A sudden traffic drop usually means a Google algorithm update, a technical issue, or manual penalty. I diagnose the root cause through GSC, Ahrefs, and crawl analysis — then build a recovery plan specific to your situation.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CTA / CONTACT ═══════════════════ -->
+<section id="contact" class="cta-section">
+  <div class="cta-inner">
+    <div class="reveal">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.7);display:block;margin-bottom:0.75rem;">Let's Grow Together</span>
+      <h2 class="display display-lg" style="color:var(--white);margin-bottom:1rem;">Ready to grow your<br>organic traffic?</h2>
+      <p style="color:rgba(255,255,255,0.8);font-size:1rem;line-height:1.75;margin-bottom:2rem;max-width:520px;margin-left:auto;margin-right:auto;">Whether you need a full SEO strategy, a one-time audit, ongoing monthly support, or an SEO Head who can lead your team — let's talk about what organic growth could look like for you.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="mailto:mohitrey952@email.com" class="btn btn-white">📧 Send Me An Email</a>
+        <a href="https://www.linkedin.com/in/mohit-kumar-179921218/" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:rgba(255,255,255,0.4);color:white;">💼 LinkedIn Profile</a>
+        <a href="tel:+919521755820" class="btn btn-outline" style="border-color:rgba(255,255,255,0.4);color:white;">📞 +91-9521755820</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer style="background:var(--ink);padding:1.25rem 0;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:center;">
+    <span style="font-size:0.75rem;font-family:'JetBrains Mono',monospace;color:rgba(255,255,255,0.4);">© <span id="year"></span> Mohit Rey · All Rights Reserved</span>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919521755820?text=Hi%20Mohit%2C%20I%20found%20your%20SEO%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" id="wa-btn" title="Chat on WhatsApp" style="position:fixed;bottom:1.75rem;right:1.75rem;z-index:200;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.45);transition:transform 0.25s,box-shadow 0.25s;text-decoration:none;" onmouseover="this.style.transform='scale(1.12)';this.style.boxShadow='0 8px 30px rgba(37,211,102,0.6)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(37,211,102,0.45)'">
+  <!-- WhatsApp SVG icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="white">
+    <path d="M16 2C8.268 2 2 8.268 2 16c0 2.492.648 4.833 1.78 6.865L2 30l7.353-1.75A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.44 11.44 0 0 1-5.844-1.607l-.418-.248-4.364 1.038 1.075-4.25-.272-.437A11.46 11.46 0 0 1 4.5 16C4.5 9.596 9.596 4.5 16 4.5S27.5 9.596 27.5 16 22.404 27.5 16 27.5zm6.29-8.539c-.344-.172-2.035-1.004-2.35-1.118-.316-.115-.546-.172-.776.172-.23.344-.891 1.118-1.092 1.348-.2.23-.402.258-.746.086-.344-.172-1.452-.535-2.767-1.708-1.022-.912-1.713-2.038-1.913-2.382-.2-.344-.021-.53.15-.701.155-.154.344-.402.516-.603.172-.2.23-.344.344-.573.115-.23.057-.43-.029-.603-.086-.172-.776-1.87-1.063-2.562-.28-.673-.563-.582-.776-.593l-.66-.011c-.23 0-.603.086-.918.43s-1.205 1.177-1.205 2.87 1.233 3.33 1.405 3.56c.172.23 2.427 3.706 5.88 5.196.822.355 1.464.567 1.964.726.825.263 1.576.226 2.17.137.662-.099 2.035-.832 2.322-1.635.287-.803.287-1.491.2-1.635-.086-.143-.316-.23-.66-.402z"/>
+  </svg>
+  <!-- Pulse ring -->
+  <span style="position:absolute;width:56px;height:56px;border-radius:50%;background:rgba(37,211,102,0.3);animation:waPulse 2s ease-out infinite;"></span>
+</a>
+
+<style>
+@keyframes waPulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+/* ── CUSTOM CURSOR ── */
+* { cursor: none !important; }
+#cursor-dot {
+  width: 8px; height: 8px;
+  background: var(--g2);
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9999;
+  transform: translate(-50%,-50%);
+  transition: transform 0.1s, background 0.2s, width 0.2s, height 0.2s;
+}
+#cursor-ring {
+  width: 36px; height: 36px;
+  border: 2px solid var(--g2);
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9998;
+  transform: translate(-50%,-50%);
+  transition: width 0.25s, height 0.25s, border-color 0.25s, background 0.25s, opacity 0.25s;
+  opacity: 0.7;
+}
+body:hover #cursor-dot { opacity: 1; }
+body.cursor-hover #cursor-ring { width: 52px; height: 52px; border-color: var(--g1); opacity: 1; }
+body.cursor-btn #cursor-dot { width: 48px; height: 48px; background: var(--g2); opacity: 0.15; }
+body.cursor-btn #cursor-ring { width: 48px; height: 48px; border-color: var(--g2); opacity: 0; }
+body.cursor-img #cursor-ring { width: 56px; height: 56px; border-color: var(--g1); }
+.cursor-click-ripple {
+  position: fixed; pointer-events: none; z-index: 9997;
+  border-radius: 50%; border: 2px solid var(--g2);
+  animation: rippleOut 0.5s ease-out forwards;
+}
+@keyframes rippleOut {
+  from { width: 8px; height: 8px; opacity: 1; }
+  to   { width: 60px; height: 60px; opacity: 0; }
+}
+
+/* ── SCROLL PROGRESS BAR ── */
+#scroll-progress {
+  position: fixed; top: 0; left: 0; height: 3px; z-index: 999;
+  background: linear-gradient(90deg, var(--g3), var(--g2), var(--g1));
+  width: 0%; transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ── PRELOADER ── */
+#preloader {
+  position: fixed; inset: 0; z-index: 10000;
+  background: var(--g7);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+#preloader.done { opacity: 0; transform: translateY(-20px); pointer-events: none; }
+.preloader-logo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3rem; color: var(--ink);
+  letter-spacing: -0.02em; margin-bottom: 1.5rem;
+  animation: preloaderPulse 1.5s ease-in-out infinite;
+}
+.preloader-logo span { color: var(--g2); }
+.preloader-bar-track {
+  width: 200px; height: 3px;
+  background: var(--g5); border-radius: 10px; overflow: hidden;
+}
+.preloader-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--g3), var(--g2));
+  border-radius: 10px;
+  animation: preloaderFill 1.8s ease-out forwards;
+}
+@keyframes preloaderFill { from { width: 0; } to { width: 100%; } }
+@keyframes preloaderPulse {
+  0%,100% { opacity: 1; } 50% { opacity: 0.6; }
+}
+
+/* ── DARK MODE ── */
+body.dark {
+  --g7: #0F1A15; --g6: #162118; --g5: #1E2D24;
+  --g4: #2A3D32; --g3: #4A7060; --g2: #6BA88F; --g1: #8DC4A8;
+  --ink: #E8F5EC; --ink2: #C8E0D2; --muted: #8DB5A0;
+  --border: #2A3D32; --white: #162118;
+  --shadow: 0 4px 24px rgba(0,0,0,0.3);
+  --shadow-lg: 0 12px 48px rgba(0,0,0,0.4);
+}
+body.dark nav { background: rgba(15,26,21,0.95); }
+body.dark #preloader { background: #0F1A15; }
+#dark-toggle {
+  width: 44px; height: 24px;
+  background: var(--g4); border: none;
+  border-radius: 12px; cursor: none;
+  position: relative; transition: background 0.3s;
+  flex-shrink: 0;
+}
+#dark-toggle::after {
+  content: '';
+  position: absolute; top: 2px; left: 2px;
+  width: 20px; height: 20px;
+  background: var(--white); border-radius: 50%;
+  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+body.dark #dark-toggle { background: var(--g2); }
+body.dark #dark-toggle::after { transform: translateX(20px); background: var(--ink); }
+.dark-label { font-size: 0.7rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+
+/* ── TYPEWRITER ── */
+.typewriter-word {
+  display: inline-block;
+  color: var(--g2);
+  font-style: italic;
+  min-width: 180px;
+}
+.typewriter-cursor {
+  display: inline-block;
+  width: 3px; height: 0.85em;
+  background: var(--g2);
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 0.8s steps(1) infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+/* ── AVATAR in testimonials ── */
+.testi-avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; font-weight: 700; color: white;
+  flex-shrink: 0;
+  font-family: 'DM Serif Display', serif;
+}
+
+/* ── 3D TILT CARDS ── */
+.tilt-card { transform-style: preserve-3d; }
+
+/* ── BACK TO TOP ── */
+#back-top {
+  position: fixed; bottom: 5.5rem; right: 1.75rem; z-index: 200;
+  width: 42px; height: 42px; border-radius: 50%;
+  background: var(--white); border: 1.5px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; color: var(--g2);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+#back-top.show { opacity: 1; pointer-events: auto; }
+#back-top:hover { background: var(--g2); color: white; transform: translateY(-3px); }
+
+/* ── NAV HIDE ON SCROLL ── */
+nav { transition: box-shadow 0.3s, transform 0.35s; }
+nav.nav-hidden { transform: translateY(-100%); }
+
+/* ── FAQ ── */
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+}
+.faq-q {
+  width: 100%; background: none; border: none;
+  text-align: left; cursor: none;
+  padding: 1.25rem 0;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.95rem; font-weight: 600; color: var(--ink);
+  transition: color 0.2s;
+}
+.faq-q:hover { color: var(--g2); }
+.faq-icon {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--g6); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; color: var(--g2); flex-shrink: 0;
+  transition: transform 0.3s, background 0.3s;
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); background: var(--g2); color: white; }
+.faq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s;
+  font-size: 0.88rem; color: var(--muted); line-height: 1.75;
+}
+.faq-item.open .faq-a { max-height: 300px; padding-bottom: 1.25rem; }
+
+/* ── CASE STUDY METRIC BOX ── */
+.cs-metric {
+  display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1rem;
+  padding-top: 1rem; border-top: 1px solid var(--border);
+}
+.cs-metric-pill {
+  background: var(--g6); border: 1px solid var(--g4);
+  border-radius: 6px; padding: 0.35rem 0.7rem;
+  font-size: 0.72rem; font-weight: 600; color: var(--g1);
+  display: flex; align-items: center; gap: 0.3rem;
+}
+</style>
+
+<script>
+/* ── TESTIMONIAL SLIDER ── */
+(function() {
+  const track = document.getElementById('testi-track');
+  const prev  = document.getElementById('testi-prev');
+  const next  = document.getElementById('testi-next');
+  const dots  = document.querySelectorAll('.td');
+  if (!track) return;
+
+  const cards = track.querySelectorAll('.testi-card');
+  const total = cards.length; // 6
+  let current = 0;
+  let autoT;
+
+  function visible() { return window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3; }
+  function maxIdx()  { return total - visible(); }
+
+  function cardW() {
+    const gap = 24;
+    return cards[0].offsetWidth + gap;
+  }
+
+  function goTo(i) {
+    current = Math.max(0, Math.min(i, maxIdx()));
+    track.style.transform = `translateX(-${current * cardW()}px)`;
+    const dotCount = dots.length;
+    dots.forEach((d, idx) => {
+      const active = idx === Math.round(current * (dotCount - 1) / Math.max(maxIdx(), 1));
+      d.style.background = active ? 'var(--g2)' : 'var(--g4)';
+      d.style.width = active ? '20px' : '8px';
+      d.style.borderRadius = '10px';
+    });
+  }
+
+  function step() { goTo(current >= maxIdx() ? 0 : current + 1); }
+  function stepBack() { goTo(current <= 0 ? maxIdx() : current - 1); }
+
+  next.addEventListener('click', () => { step(); reset(); });
+  prev.addEventListener('click', () => { stepBack(); reset(); });
+  dots.forEach((d, i) => d.addEventListener('click', () => {
+    goTo(Math.round(i * maxIdx() / Math.max(dots.length - 1, 1)));
+    reset();
+  }));
+
+  let tx = 0;
+  track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend',   e => {
+    const diff = tx - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) { diff > 0 ? step() : stepBack(); reset(); }
+  });
+
+  function start() { autoT = setInterval(step, 3500); }
+  function reset() { clearInterval(autoT); start(); }
+
+  goTo(0);
+  start();
+  window.addEventListener('resize', () => goTo(Math.min(current, maxIdx())));
+})();
+
+/* ── LIGHTBOX ── */
+function openLightbox(src, caption) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-caption').textContent = caption;
+  lb.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+/* ── GSC GRID RESPONSIVE ── */
+(function() {
+  const grid = document.getElementById('gsc-grid');
+  if (!grid) return;
+  function setGrid() {
+    if (window.innerWidth < 640) grid.style.gridTemplateColumns = '1fr';
+    else if (window.innerWidth < 900) grid.style.gridTemplateColumns = '1fr 1fr';
+    else grid.style.gridTemplateColumns = 'repeat(3,1fr)';
+  }
+  setGrid();
+  window.addEventListener('resize', setGrid);
+})();
+
+/* ── YEAR ── */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ── NAV SCROLL ── */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+/* ── MOBILE MENU ── */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+/* ── RESPONSIVE ABOUT GRID ── */
+function fixAboutGrid() {
+  const g = document.querySelector('.grid-about');
+  if (!g) return;
+  if (window.innerWidth < 768) {
+    g.style.gridTemplateColumns = '1fr';
+    g.style.gap = '2rem';
+  } else {
+    g.style.gridTemplateColumns = '1fr 1fr';
+    g.style.gap = '4rem';
+  }
+}
+fixAboutGrid();
+window.addEventListener('resize', fixAboutGrid);
+
+/* ── SCROLL REVEAL ── */
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => revealObserver.observe(el));
+
+/* ── SKILL BARS ── */
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const fill = entry.target;
+      const width = fill.dataset.width;
+      setTimeout(() => { fill.style.width = width + '%'; }, 200);
+      barObserver.unobserve(fill);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.skill-bar-fill').forEach(el => barObserver.observe(el));
+
+/* ── COUNTER ANIMATION ── */
+function animateCounter(el, target, duration = 1600) {
+  let start = 0;
+  const step = target / (duration / 16);
+  const timer = setInterval(() => {
+    start = Math.min(start + step, target);
+    el.textContent = Math.floor(start);
+    if (start >= target) clearInterval(timer);
+  }, 16);
+}
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      animateCounter(el, parseInt(el.dataset.target));
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.counter-num').forEach(el => counterObserver.observe(el));
+
+/* ── KEYWORD SLIDER ── */
+(function() {
+  const track = document.getElementById('kw-track');
+  const prevBtn = document.getElementById('kw-prev');
+  const nextBtn = document.getElementById('kw-next');
+  const dots = document.querySelectorAll('.kw-dot');
+  if (!track) return;
+
+  const cards = track.querySelectorAll('.kw-card');
+  const total = cards.length; // 6
+  const visibleCount = window.innerWidth < 640 ? 1 : 2;
+  const maxIndex = total - visibleCount; // max slide = 4 (shows 2 at a time)
+  let current = 0;
+  let autoTimer;
+
+  function getCardWidth() {
+    const gap = 16;
+    return cards[0].offsetWidth + gap;
+  }
+
+  function goTo(index) {
+    current = Math.max(0, Math.min(index, maxIndex));
+    track.style.transform = `translateX(-${current * getCardWidth()}px)`;
+    dots.forEach((d, i) => {
+      d.style.background = i === current ? 'var(--g2)' : 'var(--g4)';
+      d.style.width = i === current ? '20px' : '8px';
+      d.style.borderRadius = '10px';
+    });
+  }
+
+  function next() { goTo(current >= maxIndex ? 0 : current + 1); }
+  function prev() { goTo(current <= 0 ? maxIndex : current - 1); }
+
+  nextBtn.addEventListener('click', () => { next(); resetAuto(); });
+  prevBtn.addEventListener('click', () => { prev(); resetAuto(); });
+  dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); resetAuto(); }));
+
+  // Touch/swipe support
+  let touchStartX = 0;
+  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) { diff > 0 ? next() : prev(); resetAuto(); }
+  });
+
+  // Auto-advance every 3.5s
+  function startAuto() { autoTimer = setInterval(next, 3500); }
+  function resetAuto() { clearInterval(autoTimer); startAuto(); }
+
+  goTo(0);
+  startAuto();
+})();
+
+/* ── SMOOTH ACTIVE NAV ── */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.style.color = '');
+      const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+      if (active && !active.classList.contains('btn-nav')) active.style.color = 'var(--g2)';
+    }
+  });
+}, { threshold: 0.4 });
+sections.forEach(s => sectionObserver.observe(s));
+
+/* ── PRELOADER ── */
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const pl = document.getElementById('preloader');
+    if (pl) { pl.classList.add('done'); setTimeout(() => pl.remove(), 700); }
+  }, 1900);
+});
+
+/* ── CUSTOM CURSOR ── */
+(function() {
+  const dot  = document.getElementById('cursor-dot');
+  const ring = document.getElementById('cursor-ring');
+  if (!dot || !ring) return;
+  let mx = -100, my = -100, rx = -100, ry = -100;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  function loop() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    dot.style.left  = mx + 'px'; dot.style.top  = my + 'px';
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(loop);
+  }
+  loop();
+  document.addEventListener('click', e => {
+    const r = document.createElement('div');
+    r.className = 'cursor-click-ripple';
+    r.style.cssText = `left:${e.clientX}px;top:${e.clientY}px;margin:-4px 0 0 -4px;`;
+    document.body.appendChild(r);
+    setTimeout(() => r.remove(), 500);
+  });
+  const hoverEls = 'a,button,.card,.case-card,.service-card,.testi-card,.kw-card,.tool-chip,.keyword-pill,.btn';
+  document.querySelectorAll(hoverEls).forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+  });
+  document.querySelectorAll('.btn-primary,.btn-outline,.btn-white,.btn-nav').forEach(el => {
+    el.addEventListener('mouseenter', () => { document.body.classList.add('cursor-btn'); document.body.classList.remove('cursor-hover'); });
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-btn'));
+  });
+  document.querySelectorAll('img,.gsc-card').forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-img'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-img'));
+  });
+})();
+
+/* ── SCROLL PROGRESS BAR ── */
+(function() {
+  const bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+  window.addEventListener('scroll', () => {
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (window.scrollY / total * 100) + '%';
+  });
+})();
+
+/* ── NAV HIDE/SHOW ON SCROLL ── */
+(function() {
+  let lastY = 0;
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y > 120) {
+      nav.classList.toggle('nav-hidden', y > lastY);
+    } else {
+      nav.classList.remove('nav-hidden');
+    }
+    lastY = y;
+  });
+})();
+
+/* ── BACK TO TOP ── */
+(function() {
+  const btn = document.getElementById('back-top');
+  if (!btn) return;
+  window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 400));
+  btn.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+})();
+
+/* ── DARK MODE TOGGLE ── */
+(function() {
+  const toggle = document.getElementById('dark-toggle');
+  const label  = document.getElementById('dark-label');
+  if (!toggle) return;
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark') { document.body.classList.add('dark'); if(label) label.textContent = '🌙'; }
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    const isDark = document.body.classList.contains('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    if (label) label.textContent = isDark ? '🌙' : '☀️';
+  });
+})();
+
+/* ── TYPEWRITER EFFECT ── */
+(function() {
+  const el = document.getElementById('tw-word');
+  if (!el) return;
+  const words = ['Converts.', 'Dominates.', 'Grows.', 'Ranks.', 'Wins.'];
+  let wi = 0, ci = 0, deleting = false;
+  function type() {
+    const word = words[wi];
+    if (!deleting) {
+      el.textContent = word.slice(0, ++ci);
+      if (ci === word.length) { deleting = true; setTimeout(type, 1800); return; }
+    } else {
+      el.textContent = word.slice(0, --ci);
+      if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
+    }
+    setTimeout(type, deleting ? 60 : 100);
+  }
+  setTimeout(type, 1200);
+})();
+
+/* ── 3D TILT ON CARDS ── */
+(function() {
+  document.querySelectorAll('.card,.case-card,.service-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = e.clientX - r.left, y = e.clientY - r.top;
+      const cx = r.width / 2, cy = r.height / 2;
+      const rx2 = ((y - cy) / cy) * 6;
+      const ry2 = ((x - cx) / cx) * -6;
+      card.style.transform = `perspective(800px) rotateX(${rx2}deg) rotateY(${ry2}deg) translateY(-4px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+      card.style.transition = 'transform 0.5s ease';
+      setTimeout(() => card.style.transition = '', 500);
+    });
+  });
+})();
+
+/* ── FAQ ACCORDION ── */
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+/* ── FAQ GRID RESPONSIVE ── */
+(function() {
+  const g = document.getElementById('faq-grid');
+  if (!g) return;
+  function fix() { g.style.gridTemplateColumns = window.innerWidth < 768 ? '1fr' : '1fr 1.5fr'; }
+  fix(); window.addEventListener('resize', fix);
+})();
+
+(function() {
+  const b1 = document.querySelector('.hero-blob-1');
+  const b2 = document.querySelector('.hero-blob-2');
+  document.addEventListener('mousemove', e => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 30;
+    const y = (e.clientY / window.innerHeight - 0.5) * 30;
+    if (b1) b1.style.transform = `translate(${x}px,${y}px)`;
+    if (b2) b2.style.transform = `translate(${-x}px,${-y}px)`;
+  });
+})();
+
+</script>
+
+</body>
+</html>
